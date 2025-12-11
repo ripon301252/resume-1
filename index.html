@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+
+    <!-- PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+      body {
+        background: white;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-black">
+    <!-- A4 Fixed Wrapper -->
+    <div
+      id="resume"
+      class="mx-auto bg-white"
+      style="width: 794px; min-height: 1123px; padding: 20px"
+    >
+      <!-- Header -->
+      <header class="mt-4">
+        <h1 class="text-2xl font-semibold text-center">Mahfuzur Rahman</h1>
+        <h3 class="text-base text-center mt-1">MERN-Stack Developer</h3>
+
+        <p
+          class="text-center text-xs flex flex-wrap items-center justify-center gap-2 mt-2"
+        >
+          <span>+880-1626-607-121</span>
+          <span>|</span>
+          <a
+            class="text-blue-600 underline"
+            href="mailto:ripon301252@gmail.com"
+            target="_blank"
+            >Email</a
+          >
+          <span>|</span>
+          <a
+            class="text-blue-600 underline"
+            href="https://www.linkedin.com/in/mahfuzur-rahman-280471392/"
+            target="_blank"
+            >Linkedin</a
+          >
+          <span>|</span>
+          <a
+            class="text-blue-600 underline"
+            href="https://github.com/ripon301252"
+            target="_blank"
+            >GitHub</a
+          >
+          <span>|</span>
+          <span
+            onclick="downloadPDF()"
+            class="cursor-pointer text-blue-600 underline"
+            >PDF</span
+          >
+        </p>
+      </header>
+
+      <!-- Main Content -->
+      <main class="mt-4 space-y-3 text-sm">
+        <!-- Career Objective -->
+        <section>
+          <h2 class="text-lg font-bold mb-1">Career Objective</h2>
+          <p class="leading-snug">
+            I am a dedicated and motivated learner seeking an opportunity to
+            apply and grow my skills in a real-world environment. My goal is to
+            develop strong technical abilities, contribute to a professional
+            team, and continuously improve myself through hands-on experience. I
+            am eager to take on new challenges, learn quickly, and build a
+            successful career in the tech industry.
+          </p>
+        </section>
+
+        <!-- <hr class="my-1" /> -->
+
+        <!-- Technical Skills -->
+        <section>
+          <h2 class="text-lg font-bold mb-1">Technical Skills</h2>
+          <ul class="leading-snug space-y-0.5">
+            <li><span class="font-semibold">Language:</span> JavaScript</li>
+            <li>
+              <span class="font-semibold">Frontend:</span> TailwindCSS, ReactJS
+            </li>
+            <li>
+              <span class="font-semibold">Backend:</span> ExpressJS, NodeJS,
+              Firebase
+            </li>
+            <li><span class="font-semibold">Database:</span> MongoDB</li>
+            <li>
+              <span class="font-semibold">Version Control & Deployment:</span>
+              Git, GitHub, Vercel, Netlify
+            </li>
+          </ul>
+        </section>
+
+        <!-- <hr class="my-1" /> -->
+
+        <!-- Projects -->
+        <section>
+          <h2 class="text-lg font-bold mb-2">Projects</h2>
+
+          <!-- PawMart -->
+          <div class="mb-3">
+            <h3 class="font-bold text-base mb-1">
+              1. PawMart – Project Highlights
+            </h3>
+
+            <div class="flex flex-wrap gap-2 text-xs mb-1">
+              <a
+                class="text-blue-600 underline"
+                href="https://github.com/ripon301252/pawmart-client-B-12"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                class="text-blue-600 underline"
+                href="https://pawmart-cf02df.netlify.app/myOrder"
+                target="_blank"
+                >Live</a
+              >
+              <a
+                class="text-blue-600 underline"
+                href="https://pawmart-server-psi.vercel.app/"
+                target="_blank"
+                >Server</a
+              >
+            </div>
+
+            <ul
+              class="list-disc list-inside ml-3 leading-snug space-y-0.5 text-sm"
+            >
+              <li>Responsive pet e-commerce platform.</li>
+              <li>User authentication & role-based access.</li>
+              <li>Admin dashboard for management.</li>
+              <li>Fast performance with modern frontend.</li>
+              <li>Real-time dynamic data updates.</li>
+            </ul>
+
+            <p class="font-semibold text-sm mt-1">
+              Tech Stack: React, Tailwind CSS, Node.js, MongoDB, Firebase Auth,
+              Axios, Vercel
+            </p>
+          </div>
+
+          <!-- KidsToy -->
+          <div>
+            <h3 class="font-bold text-base mb-1">
+              2. Kidstoy – Project Highlights
+            </h3>
+
+            <div class="flex flex-wrap gap-2 text-xs mb-1">
+              <a
+                class="text-blue-600 underline"
+                href="https://github.com/ripon301252/kids-toy-update"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                class="text-blue-600 underline"
+                href="https://kids-toy-up-73b1c6.netlify.app/"
+                target="_blank"
+                >Live</a
+              >
+            </div>
+
+            <ul
+              class="list-disc list-inside ml-3 leading-snug space-y-0.5 text-sm"
+            >
+              <li>Responsive kids toy e-commerce platform.</li>
+              <li>User login & shopping cart.</li>
+              <li>Filters, categories & search.</li>
+              <li>Checkout with dynamic pricing.</li>
+              <li>Modern UI with Tailwind.</li>
+            </ul>
+
+            <p class="font-semibold text-sm mt-1">
+              Tech Stack: React, Tailwind CSS, Firebase, Axios
+            </p>
+          </div>
+        </section>
+
+        <!-- <hr class="my-1" /> -->
+
+        <!-- Education -->
+        <section>
+          <h2 class="text-lg font-bold mb-1">Education</h2>
+          <div class="space-y-1 leading-snug">
+            <p>
+              <span class="font-semibold"
+                >Dakhil – Tongi Ashraful Ulum Alim Madrasah</span
+              ><br />GPA 5.00
+            </p>
+            <p>
+              <span class="font-semibold"
+                >Diploma in Textile – Shahid Abdur Rob Saronibat Textile
+                Engineering College</span
+              ><br />CGPA 3.12
+            </p>
+            <p>
+              <span class="font-semibold"
+                >B.Sc. in Textile – The Peoples University of Bangladesh</span
+              ><br />CGPA 3.47
+            </p>
+          </div>
+        </section>
+
+        <!-- <hr class="my-1" /> -->
+
+        <!-- Languages -->
+        <section>
+          <h2 class="text-lg font-bold mb-1">Languages</h2>
+          <ul class="list-disc list-inside leading-snug space-y-0.5">
+            <li>Bengali - Native</li>
+            <li>English - Basic</li>
+            <li>Urdu - Medium</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <!-- PDF SCRIPT -->
+    <script>
+      async function downloadPDF() {
+        const resume = document.getElementById("resume");
+
+        const canvas = await html2canvas(resume, { scale: 2 });
+        const imgData = canvas.toDataURL("image/png");
+
+        const pdf = new jspdf.jsPDF("p", "mm", "a4");
+
+        let width = 210;
+        let height = (canvas.height * width) / canvas.width;
+
+        pdf.addImage(imgData, "PNG", 0, 0, width, height);
+        pdf.save("Mahfuzur_Rahman_Resume.pdf");
+      }
+    </script>
+  </body>
+</html>
