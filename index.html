@@ -3,245 +3,354 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume</title>
+    <title>Resume Of Mahfuzur Rahman</title>
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com/3.4.1"></script>
-
-    <!-- PDF Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
-      body {
-        background: white;
+      @media print {
+        button {
+          display: none !important;
+        }
+      }
+
+      #resume {
+        line-height: 1;
       }
     </style>
   </head>
 
   <body class="bg-white text-black">
-    <!-- A4 Fixed Wrapper -->
     <div
       id="resume"
-      class="mx-auto bg-white"
-      style="width: 794px; min-height: 1123px; padding: 20px"
+      class="mx-auto bg-white w-full max-w-[980px] min-h-screen p-4 md:p-6 lg:p-7"
     >
       <!-- Header -->
-      <header class="mt-4">
-        <h1 class="text-2xl font-semibold text-center">Mahfuzur Rahman</h1>
-        <h3 class="text-base text-center mt-1">MERN-Stack Developer</h3>
+      <header class="flex md:flex-row flex-col justify-between">
+        <div>
+          <h1 class=" text-3xl font-bold md:text-left text-center">
+            Mahfuzur Rahman
+          </h1>
+          <h3 class="text-xl md:text-left font-semibold text-center mt-1">
+            MERN-Stack Developer
+          </h3>
+        </div>
+        <div class="md:text-right text-center text-sm md:mt-0 mt-5">
+          <p><span class="font-bold">Email : </span> ripon301252@gmail.com</p>
+          <p>
+            <span class="font-bold">Address : </span> Pagar, Tongi, Gazipur,
+            Bangladesh
+          </p>
 
-        <p
-          class="text-center text-xs flex flex-wrap items-center justify-center gap-2 mt-2"
-        >
-          <span>+880-1626-607-121</span>
-          <span>|</span>
+          <p><span class="font-bold">Mobile : </span> +880-1626-607-121</p>
+
           <a
-            class="text-blue-600 underline"
-            href="mailto:ripon301252@gmail.com"
-            target="_blank"
-            >Email</a
-          >
-          <span>|</span>
-          <a
-            class="text-blue-600 underline"
+            class="text-blue-600"
             href="https://www.linkedin.com/in/mahfuzur-rahman-280471392/"
             target="_blank"
             >Linkedin</a
           >
-          <span>|</span>
+          <span onclick="downloadResume()" class="cursor-pointer">|</span>
           <a
-            class="text-blue-600 underline"
+            class="text-blue-600"
             href="https://github.com/ripon301252"
             target="_blank"
             >GitHub</a
           >
-          <span>|</span>
-          <span
-            onclick="downloadPDF()"
-            class="cursor-pointer text-blue-600 underline"
-            >PDF</span
-          >
-        </p>
+        </div>
       </header>
 
+      <hr class="mt-1" />
+
       <!-- Main Content -->
-      <main class="mt-4 space-y-3 text-sm">
+      <main class=" space-y-0.5">
         <!-- Career Objective -->
         <section>
-          <h2 class="text-lg font-bold mb-1">Career Objective</h2>
-          <p class="leading-snug">
-            I am a dedicated and motivated learner seeking an opportunity to
-            apply and grow my skills in a real-world environment. My goal is to
-            develop strong technical abilities, contribute to a professional
-            team, and continuously improve myself through hands-on experience. I
-            am eager to take on new challenges, learn quickly, and build a
-            successful career in the tech industry.
+          <h2 class="text-lg font-bold">Career Objective</h2>
+          <p class=" text-sm">
+            I am a motivated learner seeking to grow my technical skills,
+            contribute effectively to a team, and develop a successful career in
+            the technology industry.
           </p>
         </section>
 
-        <!-- <hr class="my-1" /> -->
-
         <!-- Technical Skills -->
         <section>
-          <h2 class="text-lg font-bold mb-1">Technical Skills</h2>
-          <ul class="leading-snug space-y-0.5">
-            <li><span class="font-semibold">Language:</span> JavaScript</li>
+          <h2 class="text-lg font-bold">Technical Skills</h2>
+          <ul class="leading-snug space-y-0.5 text-sm">
             <li>
-              <span class="font-semibold">Frontend:</span> TailwindCSS, ReactJS
+              <span class="font-bold">Frontend:</span> HTML , CSS3, TailwindCSS,
+              JavaScript, ReactJS, React.
             </li>
             <li>
-              <span class="font-semibold">Backend:</span> ExpressJS, NodeJS,
-              Firebase
+              <span class="font-bold">Backend:</span> ExpressJS, NodeJS,
+              Firebase, MongoDB.
             </li>
-            <li><span class="font-semibold">Database:</span> MongoDB</li>
             <li>
-              <span class="font-semibold">Version Control & Deployment:</span>
-              Git, GitHub, Vercel, Netlify
+              <span class="font-bold">Tools & Others:</span>
+              Git, GitHub, Vercel, Netlify, VS Code.
             </li>
           </ul>
         </section>
 
-        <!-- <hr class="my-1" /> -->
+        
 
         <!-- Projects -->
         <section>
-          <h2 class="text-lg font-bold mb-2">Projects</h2>
+          <h2 class="text-lg font-bold">Projects</h2>
 
-          <!-- PawMart -->
-          <div class="mb-3">
-            <h3 class="font-bold text-base mb-1">
-              1. PawMart – Project Highlights
-            </h3>
+          <!-- AssetVerse -->
+          <div>
+            <div
+              class="flex md:flex-row flex-col md:items-center items-start gap-5"
+            >
+              <h3 class="font-bold text-base mb-1">
+                1. AssetVerse – Project Highlights
+              </h3>
 
-            <div class="flex flex-wrap gap-2 text-xs mb-1">
-              <a
-                class="text-blue-600 underline"
-                href="https://github.com/ripon301252/pawmart-client-B-12"
-                target="_blank"
-                >GitHub</a
-              >
-              <a
-                class="text-blue-600 underline"
-                href="https://pawmart-cf02df.netlify.app/myOrder"
-                target="_blank"
-                >Live</a
-              >
-              <a
-                class="text-blue-600 underline"
-                href="https://pawmart-server-psi.vercel.app/"
-                target="_blank"
-                >Server</a
-              >
+              <div class="flex flex-wrap gap-2 text-xs">
+                <a
+                  class="text-blue-600 "
+                  href="https://github.com/ripon301252/asset-verse-client"
+                  target="_blank"
+                  >GitHub</a
+                >
+                <span>|</span>
+                <a
+                  class="text-blue-600 "
+                  href="https://asset-verse-13e4f4.netlify.app/"
+                  target="_blank"
+                  >Live</a
+                >
+                <span>|</span>
+                <a
+                  class="text-blue-600 "
+                  href="https://asset-verse-server-eosin.vercel.app/"
+                  target="_blank"
+                  >Server</a
+                >
+              </div>
             </div>
 
-            <ul
-              class="list-disc list-inside ml-3 leading-snug space-y-0.5 text-sm"
-            >
-              <li>Responsive pet e-commerce platform.</li>
-              <li>User authentication & role-based access.</li>
-              <li>Admin dashboard for management.</li>
-              <li>Fast performance with modern frontend.</li>
-              <li>Real-time dynamic data updates.</li>
+            <ul class="list-disc ml-8 space-y-0.5 text-sm">
+              <li>
+                <span class="font-semibold"
+                  >Fully responsive corporate asset management platform
+                </span>
+                built with a modern frontend, ensuring smooth user experience
+                across mobile, tablet, and desktop devices.
+              </li>
+
+              <li>
+                <span class="font-semibold"
+                  >Secure authentication with role-based access control,</span
+                >
+                providing separate dashboards and permissions for Admin, HR, and
+                Employees.
+              </li>
+              <li>
+                <span class="font-semibold">Advanced admin & HR dashboard</span>
+                for managing assets, employees, requests, and approvals
+                efficiently with real-time dynamic data updates.
+              </li>
             </ul>
 
-            <p class="font-semibold text-sm mt-1">
-              Tech Stack: React, Tailwind CSS, Node.js, MongoDB, Firebase Auth,
-              Axios, Vercel
+            <p class="text-sm mt-1">
+              <span class="font-semibold">Tech Stack:</span> React, Tailwind
+              CSS, Node.js, Express.js, MongoDB, Firebase Authentication, Axios,
+              Vercel
+            </p>
+          </div>
+
+          <!-- PawMart -->
+          <div>
+            <div
+              class="flex md:flex-row flex-col md:items-center items-start gap-5"
+            >
+              <h3 class="font-bold text-base">
+                2. PawMart – Project Highlights
+              </h3>
+
+              <div class="flex flex-wrap gap-2 text-xs mb-1">
+                <a
+                  class="text-blue-600 "
+                  href="https://github.com/ripon301252/pawmart-client-B-12"
+                  target="_blank"
+                  >GitHub</a
+                >
+                <span>|</span>
+                <a
+                  class="text-blue-600 "
+                  href="https://pawmart-cf02df.netlify.app/myOrder"
+                  target="_blank"
+                  >Live</a
+                >
+                <span>|</span>
+                <a
+                  class="text-blue-600 "
+                  href="https://pawmart-server-psi.vercel.app/"
+                  target="_blank"
+                  >Server</a
+                >
+              </div>
+            </div>
+
+            <ul class="list-disc  ml-8 space-y-0.5 text-sm">
+              <li>
+                <span class="font-semibold"
+                  >Fully responsive pet e-commerce platform
+                </span>
+                built with a modern frontend, ensuring smooth user experience
+                across mobile, tablet, and desktop devices.
+              </li>
+
+              <li>
+                <span class="font-semibold"
+                  >Secure user authentication with role-based access
+                  control,</span
+                >
+                allowing separate dashboards and permissions for users and
+                admins.
+              </li>
+              <li>
+                <span class="font-semibold">Powerful admin dashboard</span> for
+                managing products, users, and orders efficiently with real-time
+                data updates.
+              </li>
+            </ul>
+
+            <p class="text-sm mt-1">
+              <span class="font-semibold">Tech Stack:</span> React, Tailwind
+              CSS, Node.js, MongoDB, Firebase Auth, Axios, Vercel
             </p>
           </div>
 
           <!-- KidsToy -->
           <div>
-            <h3 class="font-bold text-base mb-1">
-              2. Kidstoy – Project Highlights
-            </h3>
+            <div
+              class="flex md:flex-row flex-col md:items-center items-start gap-5"
+            >
+              <h3 class="font-bold text-base mb-1">
+                3. Kidstoy – Project Highlights
+              </h3>
 
-            <div class="flex flex-wrap gap-2 text-xs mb-1">
-              <a
-                class="text-blue-600 underline"
-                href="https://github.com/ripon301252/kids-toy-update"
-                target="_blank"
-                >GitHub</a
-              >
-              <a
-                class="text-blue-600 underline"
-                href="https://kids-toy-up-73b1c6.netlify.app/"
-                target="_blank"
-                >Live</a
-              >
+              <div class="flex flex-wrap gap-2 text-xs mb-1">
+                <a
+                  class="text-blue-600 "
+                  href="https://github.com/ripon301252/kids-toy-update"
+                  target="_blank"
+                  >GitHub</a
+                >
+                <span>|</span>
+                <a
+                  class="text-blue-600 "
+                  href="https://kids-toy-up-73b1c6.netlify.app/"
+                  target="_blank"
+                  >Live</a
+                >
+              </div>
             </div>
 
-            <ul
-              class="list-disc list-inside ml-3 leading-snug space-y-0.5 text-sm"
-            >
-              <li>Responsive kids toy e-commerce platform.</li>
-              <li>User login & shopping cart.</li>
-              <li>Filters, categories & search.</li>
-              <li>Checkout with dynamic pricing.</li>
-              <li>Modern UI with Tailwind.</li>
+            <ul class="list-disc ml-8 space-y-0.5 text-sm">
+              <li>
+                <span class="font-semibold">
+                  Responsive kids toy e-commerce platform
+                </span>
+                designed with a clean and colorful interface, optimized for
+                mobile, tablet, and desktop devices.
+              </li>
+              <li>
+                <span class="font-semibold">
+                  User authentication with shopping cart functionality,</span
+                >
+                allowing users to add, remove, and manage toys easily with
+                dynamic pricing at checkout.
+              </li>
+              <li>
+                <span class="font-semibold"
+                  >Advanced product browsing features</span
+                >
+                including filters, categories, and search, built with a modern
+                UI using Tailwind CSS for a smooth experience.
+              </li>
             </ul>
 
-            <p class="font-semibold text-sm mt-1">
-              Tech Stack: React, Tailwind CSS, Firebase, Axios
+            <p class="text-sm mt-1">
+              <span class="font-semibold">Tech Stack:</span> React, Tailwind
+              CSS, Firebase, Axios
             </p>
           </div>
         </section>
 
-        <!-- <hr class="my-1" /> -->
+        <section>
+          <h2 class="text-lg font-bold">Professional Training</h2>
+          <ul class="list-disc  ml-8 space-y-0.5 text-sm">
+            <li>
+              <span class="font-bold">Complete Web Development Course –</span>
+              <span class="font-semibold">Programming Hero</span>
+            </li>
+            <li>
+              <span class="font-bold">Learned:</span
+              ><span class="font-semibold">
+                HTML, CSS, JavaScript, React, Node.js, MongoDB</span
+              >
+            </li>
+          </ul>
+        </section>
 
         <!-- Education -->
         <section>
-          <h2 class="text-lg font-bold mb-1">Education</h2>
-          <div class="space-y-1 leading-snug">
-            <p>
-              <span class="font-semibold"
-                >Dakhil – Tongi Ashraful Ulum Alim Madrasah</span
-              ><br />GPA 5.00
-            </p>
-            <p>
-              <span class="font-semibold"
-                >Diploma in Textile – Shahid Abdur Rob Saronibat Textile
-                Engineering College</span
-              ><br />CGPA 3.12
-            </p>
-            <p>
-              <span class="font-semibold"
-                >B.Sc. in Textile – The Peoples University of Bangladesh</span
-              ><br />CGPA 3.47
-            </p>
+          <h2 class="text-lg font-bold">Education</h2>
+          <div class="space-y-1 text-sm">
+            <div class="flex md:flex-row flex-col items-center gap-5">
+              <p class="font-semibold">
+                B.Sc. in Textile – The Peoples University of Bangladesh :
+                <span class="font-bold md:text-right text-left">CGPA 3.47</span>
+              </p>
+            </div>
+            <div class="flex items-center gap-5">
+              <p class="font-semibold">
+                Diploma in Textile – Shahid Abdur Rob Saronibat Textile
+                Engineering College :
+                <span class="font-bold md:text-right text-left">CGPA 3.12</span>
+              </p>
+            </div>
+            <div class="flex items-center gap-5">
+              <p class="font-semibold">
+                Dakhil – Tongi Ashraful Ulum Alim Madrasah :
+                <span class="font-bold md:text-right text-left">GPA 5.00</span>
+              </p>
+            </div>
           </div>
         </section>
 
-        <!-- <hr class="my-1" /> -->
-
         <!-- Languages -->
         <section>
-          <h2 class="text-lg font-bold mb-1">Languages</h2>
-          <ul class="list-disc list-inside leading-snug space-y-0.5">
+          <h2 class="text-lg font-bold">Languages</h2>
+          <ul class="list-disc ml-8  space-y-0.5 text-sm ">
             <li>Bengali - Native</li>
-            <li>English - Basic</li>
-            <li>Urdu - Medium</li>
+            <li>English - Professional Proficiency</li>
+            <li>Urdu - Professional Proficiency</li>
           </ul>
         </section>
       </main>
     </div>
 
-    <!-- PDF SCRIPT -->
     <script>
-      async function downloadPDF() {
-        const resume = document.getElementById("resume");
+      function downloadResume() {
+        const element = document.getElementById("resume");
 
-        const canvas = await html2canvas(resume, { scale: 2 });
-        const imgData = canvas.toDataURL("image/png");
+        const options = {
+          margin: 0.1,
+          filename: "Mahfuzur_Rahman_Resume.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+        };
 
-        const pdf = new jspdf.jsPDF("p", "mm", "a4");
-
-        let width = 210;
-        let height = (canvas.height * width) / canvas.width;
-
-        pdf.addImage(imgData, "PNG", 0, 0, width, height);
-        pdf.save("Mahfuzur_Rahman_Resume.pdf");
+        html2pdf().set(options).from(element).save();
       }
     </script>
   </body>
